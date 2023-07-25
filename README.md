@@ -25,7 +25,7 @@ nasm -f elf64 src/filter.asm -o filter.o
 
 Next, you need to link the object file generated from the assembly code to create an executable. Use the following command:
 
-```bash!
+```bash
 g++ src/main.cpp filter.o -o grayscale_filter -std=c++11 -no-pie -lX11 -lXext
 ```
 
@@ -33,7 +33,7 @@ g++ src/main.cpp filter.o -o grayscale_filter -std=c++11 -no-pie -lX11 -lXext
 
 Once the executable is created, you can use it to convert your images to grayscale. Run the following command:
 
-```bash!
+```bash
 ./grayscale_filter <input_image_name>
 ```
 
@@ -43,7 +43,7 @@ Replace `<input_image_filename>` with the filename of the color image you want t
     
 Let's say you have a color image named "my_image.jpg" located in the `/imgs` directory of the project, and you want to convert it to grayscale and save it as "output_my_image.jpg". You can use the following command:
 
-```bash!
+```bash
 ./grayscale_filter my_image.jpg
 ```
     
@@ -65,7 +65,7 @@ make clean
 
 3. To build the project, execute the following command:
 
-```bash!
+```bash
 make build
 ```
 This command will assemble the `filter.asm` file using NASM and compile the main.cpp file with g++. The resulting executable will be named `prog`, and it will be placed in the `build` directory. Additionally, the `filter.o` object file will also be moved to the `build` directory.
@@ -74,6 +74,6 @@ Once the build process is complete, you will find the prog executable ready to u
 
 Now, you can run the executable to process your images as described in the previous sections.
 
-```bash!
+```bash
 build/prog <input_image_filename>
 ```
